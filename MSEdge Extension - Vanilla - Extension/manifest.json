@@ -1,0 +1,56 @@
+{
+	"name" : "__MSG_extensionName__",
+	"description" : "__MSG_extensionDescription__",
+	"version" : "0.1.16.10501",
+	"minimum_edge_version" : "33.14281.1000.0",
+	"locale" : "en",
+	"default_locale" : "en",
+	
+	"icons" : {
+		"24" : "image/vanilla_app_icon_24.png",
+		"128" : "image/vanilla_app_icon_128.png"
+	},
+	
+	"background" : {
+		"page" : "html/background.html"
+	},
+	
+	"content_scripts" : [{
+			"matches" : [
+				"*://*/*"
+			],
+			"css" : [
+				"css/content.css"
+			],
+			"js" : [
+				"js/content.js"
+			],
+			"run_at" : "document_end",
+			"all_frames" : true
+		}
+	],
+	
+	"browser_action" : {
+		"title" : "Mouse Gestures",
+		"icon" : {
+			"20" : "image/vanilla_app_icon_20.png",
+			"25" : "image/vanilla_app_icon_25.png",
+			"30" : "image/vanilla_app_icon_30.png",
+			"40" : "image/vanilla_app_icon_40.png"
+		}
+	},
+	
+	"web_accessible_resources" : [
+		"image/vanilla_app_icon_128.png"
+	],
+	
+	"options_page" : "html/options.html",
+	
+	"permissions" : [
+        "contextMenus",
+        "tabs",
+        "storage",
+        "activeTab",
+        "<all_urls>"
+	]
+}

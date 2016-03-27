@@ -1,0 +1,10 @@
+{
+	"extensionName": {
+		"description": "The name for the extension",
+		"message": "Vanilla"
+	},
+	"extensionDescription": {
+		"description": "The description for the extension",
+		"message": "An extension for Microsoft Edge that demonstrates a vanilla use case."
+	}
+}

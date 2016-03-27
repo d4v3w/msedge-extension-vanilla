@@ -1,0 +1,10 @@
+nav > ul {
+	border - bottom : none!important
+}
+.dropdown - menu {
+	width : 100 % ;
+	min - width : 0
+}
+.dropdown - menu > li {
+	cursor : pointer
+}
