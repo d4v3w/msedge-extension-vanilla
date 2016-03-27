@@ -1,0 +1,9 @@
+Thanks for checking out the Vanilla Microsoft Edge Extension!
+PREVIEW Vanilla v0.0.0.000001
+
+Instructions:
+	1. Open Microsoft Edge
+	2. Click the "..." button and then select "Extensions"
+	3. Click the "Load unpacked extension" button
+	4. Using the folder picker, browse and then select the "MSEdge Extension - Vanilla - Extension" folder
+	5. Click the "Select folder" button
