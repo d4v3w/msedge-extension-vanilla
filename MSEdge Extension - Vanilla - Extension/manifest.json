@@ -1,56 +1,49 @@
 {
 	"name" : "__MSG_extensionName__",
+	"version" : "0.0.0.2",
+	"author" : "d4v3w",
+	
+	"browser_action" : {
+		"default_icon" : {
+			"20" : "image/vanilla_app_icon_20.png",
+			"25" : "image/vanilla_app_icon_25.png",
+			"30" : "image/vanilla_app_icon_30.png",
+			"40" : "image/vanilla_app_icon_40.png"
+		},
+        "default_title" : "Experimental extension BEER-WARE!",
+        "default_popup" : "html/popup.html"
+	},
+	
+	"content_scripts" : [{
+			"matches" : ["*://*/*"],
+			"css" : ["css/content.css"],
+			"js" : ["js/content.js"],
+			"run_at" : "document_end",
+			"all_frames" : true
+		}
+	],
+	
+    "content_security_policy" : "script-src 'self'; object-src 'self'",
+    "default_locale" : "en",
 	"description" : "__MSG_extensionDescription__",
-	"version" : "0.1.16.10501",
-	"minimum_edge_version" : "33.14281.1000.0",
-	"locale" : "en",
-	"default_locale" : "en",
+	
+	"options_page" : "html/options.html",
+	
+	"permissions" : [
+		"*://*/*", "notifications", "cookies", "tabs", "storage", "contextMenus", "background", "activeTab", "<all_urls>"
+	],
+	
+	"background" : {
+		"page" : "html/background.html",
+		"persistent" : false
+	},
 	
 	"icons" : {
 		"24" : "image/vanilla_app_icon_24.png",
 		"128" : "image/vanilla_app_icon_128.png"
 	},
 	
-	"background" : {
-		"page" : "html/background.html"
-	},
+	"minimum_edge_version" : "33.14281.1000.0",
 	
-	"content_scripts" : [{
-			"matches" : [
-				"*://*/*"
-			],
-			"css" : [
-				"css/content.css"
-			],
-			"js" : [
-				"js/content.js"
-			],
-			"run_at" : "document_end",
-			"all_frames" : true
-		}
-	],
-	
-	"browser_action" : {
-		"title" : "Mouse Gestures",
-		"icon" : {
-			"20" : "image/vanilla_app_icon_20.png",
-			"25" : "image/vanilla_app_icon_25.png",
-			"30" : "image/vanilla_app_icon_30.png",
-			"40" : "image/vanilla_app_icon_40.png"
-		}
-	},
-	
-	"web_accessible_resources" : [
-		"image/vanilla_app_icon_128.png"
-	],
-	
-	"options_page" : "html/options.html",
-	
-	"permissions" : [
-        "contextMenus",
-        "tabs",
-        "storage",
-        "activeTab",
-        "<all_urls>"
-	]
+	"web_accessible_resources" : ["image/vanilla_app_icon_128.png"]
 }
